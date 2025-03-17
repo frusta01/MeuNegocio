@@ -1,0 +1,184 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Fundo e layout geral */
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Cabeçalho */
+h1 {
+    color: #1e88e5;
+    font-size: 2rem; /* Utilizando rem para garantir a escalabilidade */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* Navegação */
+.navbar {
+    width: 100%;
+    background: #1e88e5;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background: #1565c0;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Alerta de estoque */
+.alerta {
+    background: #ff5252;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: none; /* Inicialmente oculto */
+    width: 100%;
+}
+
+/* Tabela de vendas */
+.tabela-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #1e88e5;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f8ff;
+}
+
+/* Gráficos */
+.graficos-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.grafico {
+    width: 48%;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .graficos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grafico {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

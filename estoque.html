@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Estoque</title>
+  <link rel="stylesheet" href="estoque.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+  <!-- Lista de produtos -->
+<div class="product-list">
+  <h2>Produtos em Estoque</h2>
+  <table id="product-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="product-list-body">
+      <!-- Produtos serão listados aqui -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Floating Action Button (FAB) -->
+<div class="fab-container">
+  <button class="fab" onclick="toggleMenu()">+</button>
+  <div class="fab-options">
+    <button id="abcp">Cadastrar Produto</button>
+    <button id="abap">Adicionar Produto</button>
+  </div>
+</div>
+
+<!-- Modal de Cadastro de Produto -->
+<div id="cadastro-produto-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="fecharmdcp">&times;</span>
+    <h2>Cadastrar Produto</h2>
+    <form id="form-cadastro-produto">
+      <label for="nome-produto">Nome</label>
+      <input type="text" id="produtoNome" name="nome_produto" required>
+      
+      <label for="categoria-produto">Categoria</label>
+      <select id="produtoCategoria" name="categoria_produto" required>
+        <option value="utensílios">Utensílios</option>
+        <option value="comida">Comida</option>
+        <option value="bebida-quente">Bebida Quente</option>
+        <option value="bebida-gelada">Bebida Gelada</option>
+      </select>
+      
+      <label for="preco-produto">Preço</label>
+      <input type="number" id="produtoPreco" name="preco_produto" required>
+      
+      <label for="quantidade-produto">Quantidade</label>
+      <input type="number" id="produtoQuantidade" name="quantidade_produto" required>
+      
+      <button id="cadastrar" type="submit">Cadastrar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de Adicionar Produto -->
+<div id="adicionar-produto-modal" class="modal">
+  <div class="modal-content">
+    <span id="fecharmaddp" class="close" >&times;</span>
+    <h2>Adicionar Produto</h2>
+    <label for="produto-select">Selecione um Produto</label>
+    <select id="produto-select" name="produto_select" required></select>
+    
+    <label for="quantidade-adicionar">Quantidade a Adicionar</label>
+    <input type="number" id="quantidade-adicionar" name="quantidade_adicionar" required>
+    
+    <button id="addQ">Adicionar</button>
+  </div>
+</div>
+  <script type="module" src="estoque.js"></script>
+</body>
+</html>

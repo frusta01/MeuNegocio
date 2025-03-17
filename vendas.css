@@ -1,0 +1,129 @@
+/* Resetando estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal das vendas */
+#vendas {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  overflow: hidden; /* Impede o transbordamento */
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  margin-bottom: 20px;
+}
+
+/* Estilos para os rótulos */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Estilos para os campos de entrada, seleção e botões */
+select, input, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilo do botão */
+button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Hover no botão */
+button:hover {
+  background-color: #218838;
+}
+
+/* Estilos da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Estilo para as células da tabela */
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Estilo para os cabeçalhos da tabela */
+table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* Estilo para as células da tabela */
+table td {
+  background-color: #fff;
+}
+
+/* Alternando cor de fundo nas linhas da tabela */
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover nas linhas da tabela */
+table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Adicionando rolagem tanto horizontal quanto vertical */
+.table-container {
+  width: 100%;
+  height: 300px; /* Ajuste a altura conforme necessário */
+  overflow: auto; /* Permite tanto rolagem horizontal quanto vertical */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Ajustando a largura do container principal em telas menores */
+  #vendas {
+    width: 90%;
+  }
+
+  /* Ajustando o tamanho da fonte das células da tabela */
+  table th, table td {
+    font-size: 14px;
+  }
+
+  /* Garantindo que a tabela não ultrapasse o limite da tela em dispositivos móveis */
+  .table-container {
+    padding: 0 10px; /* Adicionando espaçamento para evitar que a tabela fique muito colada na borda */
+  }
+}

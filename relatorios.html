@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios de Vendas</title>
+    <link rel="stylesheet" href="relatorios.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Relatório de Vendas</h1>
+    
+    <div id="filtros">
+        <label for="data-inicial">Data Inicial:</label>
+        <input type="date" id="data-inicial">
+        
+        <label for="data-final">Data Final:</label>
+        <input type="date" id="data-final">
+        
+        <button id=gerarR>Gerar Relatório</button>
+    </div>
+    <label for="filtro-produto">Filtrar por Produto:</label>
+    <div>
+    <label for="pesquisa">Buscar Vendas:</label>
+    <input type="text" id="pesquisa" placeholder="Buscar por produto ou valor...">
+    <button id="pesquisar">Pesquisar</button>
+</div>
+
+    <div id="resumo">
+        <h2>Resumo Geral</h2>
+        <p>Total de Vendas: <span id="total-vendas">0</span></p>
+        <p>Total de Descontos: <span id="total-descontos">0</span></p>
+        <p>Total Após Desconto: <span id="total-valor">0</span></p>
+    </div>
+
+    <canvas id="grafico-vendas" width="400" height="200"></canvas>
+
+    <table id="tabela-vendas">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário</th>
+                <th>Desconto</th>
+                <th>Total Venda</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As vendas serão carregadas aqui via JavaScript -->
+        </tbody>
+    </table>
+
+    <div id="paginacao">
+        <button id="pagina-anterior">Anterior</button>
+        <span id="pagina-atual">Página 1</span>
+        <button id="proxima-pagina">Próxima</button>
+    </div>
+
+    <script type="module"src="relatorios.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+   <nav class="navbar">
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="vendas.html">📊 Vendas</a></li>
+        <li><a href="estoque.html">📦 Estoque</a></li>
+        <li><a href="relatorios.html">📄 Relatórios</a></li>
+    </ul>
+</nav>
+    <h1>Dashboard de Vendas</h1>
+
+    <!-- Alerta de Estoque Baixo -->
+    <div id="alerta-estoque" class="alert"></div>
+
+    <!-- Lista de Vendas -->
+    <h2>Últimas Vendas</h2>
+    <table id="tabela-vendas">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados serão inseridos pelo JS -->
+        </tbody>
+    </table>
+
+    <!-- Gráficos -->
+    <h2>Análise de Vendas</h2>
+    <canvas id="grafico-vendas"></canvas>
+    <canvas id="grafico-mais-vendidos"></canvas>
+
+    <!-- Ranking de Produtos -->
+    <h2>Produtos Mais e Menos Vendidos</h2>
+    <div id="ranking-produtos"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

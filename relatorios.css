@@ -1,0 +1,165 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #2d3e50;
+}
+
+/* Filtros */
+#filtros {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#filtros label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#filtros input {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#filtros button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#filtros button:hover {
+    background-color: #45a049;
+}
+
+/* Pesquisa */
+#pesquisa {
+    padding: 8px;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#pesquisar {
+    padding: 10px 15px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pesquisar:hover {
+    background-color: #007b8d;
+}
+
+/* Resumo */
+#resumo {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#resumo h2 {
+    color: #2d3e50;
+}
+
+#resumo p {
+    font-size: 16px;
+}
+
+#resumo span {
+    font-weight: bold;
+}
+
+/* Tabela */
+#tabela-vendas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#tabela-vendas th, #tabela-vendas td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#tabela-vendas th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+#tabela-vendas td {
+    background-color: #fff;
+}
+
+/* Paginação */
+#paginacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#paginacao button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#paginacao button:hover {
+    background-color: #45a049;
+}
+
+#pagina-atual {
+    font-size: 16px;
+    margin: 0 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #filtros, #resumo {
+        margin: 10px;
+    }
+
+    #filtros input, #filtros button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #pesquisa {
+        width: 100%;
+    }
+
+    #tabela-vendas th, #tabela-vendas td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #paginacao {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

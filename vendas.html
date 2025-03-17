@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Vendas</title>
+  <link rel="stylesheet" href="vendas.css">
+</head>
+<body>
+
+  <div id="vendas">
+    <h2>Registrar Venda</h2>
+    
+    <!-- Formulário para registrar uma venda -->
+    <form id="form-venda">
+      <label for="produto-select">Produto:</label>
+      <select id="produto-select" required>
+        <!-- Produtos serão carregados aqui -->
+      </select>
+      
+      <label for="quantidade-venda">Quantidade:</label>
+      <input type="number" id="quantidade-venda" required min="1">
+      
+      <label for="desconto-venda">Desconto (R$):</label>
+      <input type="number" id="desconto-venda" value="0" min="0">
+      
+      <button type="submit" id="registrar-venda">Registrar Venda</button>
+    </form>
+
+    <h3>Histórico de Vendas</h3>
+<div class="table-container">
+  <table>
+    <table id="historico-vendas">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário</th>
+          <th>Desconto</th>
+          <th>Total</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Vendas registradas aparecerão aqui -->
+      </tbody>
+    </table>
+  </table>
+</div>
+  </div>
+
+  <script type="module" src="vendas.js"></script>
+</body>
+</html>
